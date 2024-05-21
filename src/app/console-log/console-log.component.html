@@ -1,0 +1,11 @@
+<div class="messages">
+  <div class="header">
+    <h2>Location Details</h2>
+    <button (click)="clearMessagesAndMarkers()">Clear</button>
+  </div>
+  <div class="scrollable-list">
+    <ul>
+      <li *ngFor="let message of messages">{{ message }}</li>
+    </ul>
+  </div>
+</div>
