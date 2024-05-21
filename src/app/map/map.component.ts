@@ -88,6 +88,7 @@ export class MapComponent implements OnInit {
     geoCoder.geocode({ location }, (results, status) => {
       if (status === 'OK') {
         if (results && results.length > 0) {
+          this.logMessage(`Full Address: ${results[0].formatted_address}`);
           const address = results[0].address_components;
           const streetNames = this.extractStreetName(address);
           this.logMessage(
